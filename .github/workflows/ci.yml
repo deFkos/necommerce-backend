@@ -19,5 +19,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GHCR_TOKEN }}
           registry: ghcr.io
+          context: deFkos/necommerce-backend
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
           repository: deFkos/necommerce-backend
           tag_with_ref: true
